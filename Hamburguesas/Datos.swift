@@ -60,7 +60,7 @@ class ColeccionDeHamburguesas {
         "19.- Hamburguesa solo Pan y Salsas",
         "20.- Hamburguesa a la carta"]
     
-    func obtenPais() -> String
+    func obtenHamburguesa() -> String
     {
         let posicion:Int = Int(arc4random() % UInt32(arregloHamburguesas.count))
         

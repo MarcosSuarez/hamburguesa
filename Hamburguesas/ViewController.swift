@@ -10,6 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var pais = ColeccionDePaises()
+    
+    var hamburguesa = ColeccionDeHamburguesas()
+    
+    @IBOutlet weak var etiquetaPais: UILabel!
+    
+    @IBOutlet weak var etiquetaHamburguesa: UILabel!
+    
+    @IBAction func cambiarPaisHamburguesa() {
+        
+        // Muestro un país.
+        etiquetaPais.text = pais.obtenPais()
+        
+        // Muestro una hamburguesa.
+        etiquetaHamburguesa.text = hamburguesa.obtenHamburguesa()
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

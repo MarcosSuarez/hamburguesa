@@ -26,6 +26,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGe-SU-vpW">
                                 <rect key="frame" x="205" y="285" width="190" height="30"/>
                                 <state key="normal" title="&quot;Quiero una hamburguesa!&quot;"/>
+                                <connections>
+                                    <action selector="cambiarPaisHamburguesa" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibP-yf-2yx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de Hamburguesa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNo-QF-YRz">
                                 <rect key="frame" x="201" y="116" width="198" height="21"/>
@@ -44,6 +47,10 @@
                             <constraint firstItem="vNo-QF-YRz" firstAttribute="top" secondItem="lU3-58-ZD9" secondAttribute="bottom" constant="50" id="qeW-Xq-chf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="etiquetaHamburguesa" destination="vNo-QF-YRz" id="f12-gI-dzz"/>
+                        <outlet property="etiquetaPais" destination="lU3-58-ZD9" id="qU8-XK-uUA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
