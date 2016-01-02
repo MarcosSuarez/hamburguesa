@@ -14,18 +14,24 @@ class ViewController: UIViewController {
     
     var hamburguesa = ColeccionDeHamburguesas()
     
+    var colorFondo = ColorFondo()
+    
     @IBOutlet weak var etiquetaPais: UILabel!
     
     @IBOutlet weak var etiquetaHamburguesa: UILabel!
     
-    @IBAction func cambiarPaisHamburguesa() {
+    @IBAction func cambiarDatos(sender: UIButton) {
         
         // Muestro un país.
-        etiquetaPais.text = pais.obtenPais()
+        etiquetaPais.text = "Hecho en: \(pais.obtenPais())"
         
         // Muestro una hamburguesa.
         etiquetaHamburguesa.text = hamburguesa.obtenHamburguesa()
         
+        // Color Aleatorio.
+        let colorAleatorio = colorFondo.colorAletorio()
+        view.backgroundColor = colorAleatorio
+        sender.tintColor = colorAleatorio
     }
     
     

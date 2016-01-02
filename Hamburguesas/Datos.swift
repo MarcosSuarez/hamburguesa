@@ -6,29 +6,29 @@
 //  Copyright © 2016 Marcos Suarez. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ColeccionDePaises {
-    let arregloPaises:[String] = ["1.- Argentina",
-        "2.- Brasil",
-        "3.- Colombia",
-        "4.- Chile",
-        "5.- Ecuador",
-        "6.- Bolivia",
-        "7.- Guatemala",
-        "8.- Guyana",
-        "9.- Honduras",
-        "10.- Jamaica",
-        "11.- Belice",
-        "12.- México",
-        "13.- Nicaragua",
-        "14.- Panamá",
-        "15.- Paraguay",
-        "16.- Perú",
-        "17.- Rep. Dominicana",
-        "18.- Cuba",
-        "19.- Uruguay",
-        "20.- Venezuela"]
+    let arregloPaises:[String] = ["Argentina",
+        "Brasil",
+        "Colombia",
+        "Chile",
+        "Ecuador",
+        "Bolivia",
+        "Guatemala",
+        "Guyana",
+        "Honduras",
+        "Jamaica",
+        "Belice",
+        "México",
+        "Nicaragua",
+        "Panamá",
+        "Paraguay",
+        "Perú",
+        "Rep. Dominicana",
+        "Cuba",
+        "Uruguay",
+        "Venezuela"]
     
     func obtenPais() -> String
     {
@@ -65,5 +65,17 @@ class ColeccionDeHamburguesas {
         let posicion:Int = Int(arc4random() % UInt32(arregloHamburguesas.count))
         
         return arregloHamburguesas[posicion]
+    }
+}
+
+class ColorFondo {
+    
+    func colorAletorio() -> UIColor
+    {
+        let rojo = CGFloat( arc4random() % 255 )
+        let verde = CGFloat( arc4random() % 255 )
+        let azul = CGFloat( arc4random() % 255 )
+        
+        return UIColor(red: rojo/255, green: verde/255, blue: azul/255, alpha: 1)
     }
 }
